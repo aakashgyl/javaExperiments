@@ -1,4 +1,4 @@
-package com.aakash.dsa.Sorting;
+package com.aakash.dsa.sorting;
 
 public class BubbleSort {
 
