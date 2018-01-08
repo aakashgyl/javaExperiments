@@ -6,7 +6,7 @@ public class MergeSort {
 			System.out.println("Element " + i + " is " + data[i]);
 		}
 	}
-	
+
 	void printArrayInLine(int data[]) {
 		for (int i = 0; i < data.length; i++) {
 			System.out.print(data[i] + " ");
@@ -20,11 +20,21 @@ public class MergeSort {
 
 		System.out.println("Data before sorting");
 		ss.printArray(data);
-		ss.sort(data);
+		ss.sort(data, 0, data.length);
 		System.out.println("Data after sorting");
 		ss.printArray(data);
 	}
 
-	private void sort(int[] data) {
+	private void sort(int[] data, int l, int r) {
+		if (l < r) {
+			int mid = (l + r) / 2;
+			sort(data, l, mid);
+			sort(data, mid + 1, r);
+			merge(data, l, mid, r);
+		}
+	}
+
+	private void merge(int[] data, int l, int mid, int r) {
+		
 	}
 }
